@@ -19,6 +19,6 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./geoserver_data:/var/local/geoserver
+      - ./geoserver/geoserver_data:/var/local/geoserver
     environment:
       GEOSERVER_DATA_DIR: /var/local/geoserver
