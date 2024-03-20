@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PMTiles MapLibre Example</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" crossorigin="anonymous" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/pmtiles@3.0.5/dist/pmtiles.js"></script>
+    <script src="https://unpkg.com/protomaps-leaflet@latest/dist/protomaps-leaflet.min.js"></script>
+    <style>
+        body { margin: 0; }
+        #map { height: 100vh; width: 100vw; }
+        #loadDataBtn { position: absolute; top: 10px; left: 10px; z-index: 1000; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <button id="loadDataBtn">Load Data</button>
+    <script>
+        let light_theme = protomapsL.light;
+        let PAINT_RULES = [
+            { dataLayer:"osm_building", symbolizer:new protomapsL.PolygonSymbolizer({fill:"steelblue"}) },
+            { dataLayer:"osm_pois", symbolizer:new protomapsL.CircleSymbolizer({fill:"green"}) },
+            { dataLayer:"osm_railways", symbolizer:new protomapsL.LineSymbolizer({color:"#333"}) },
+            { dataLayer:"osm_roads", symbolizer:new protomapsL.LineSymbolizer({color:"black"}) },
+            { dataLayer:"osm_waterways", symbolizer:new protomapsL.LineSymbolizer({color:"#00f"}) }   
+        ];
+
+        var map = L.map('map').setView([44.4468, 20.4884], 13);
+
+        function loadData() {
+            var layer = protomapsL.leafletLayer({
+                url:'mladenovac.pmtiles',
+                paintRules: PAINT_RULES,
+            });
+            layer.addTo(map).bindPopup('{html}');
+        }
+
+        document.getElementById('loadDataBtn').addEventListener('click', loadData);
+    </script>
+</body>
+</html>

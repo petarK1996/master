@@ -1,0 +1,53 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--2aa5eaea:18e417e3ff7:-7fdf</id>
+  <name>osm_pois</name>
+  <nativeName>osm_pois</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--2aa5eaea:18e417e3ff7:-7fe3</id>
+  </namespace>
+  <title>osm_pois</title>
+  <keywords>
+    <string>features</string>
+    <string>osm_pois</string>
+  </keywords>
+  <nativeCRS>GEOGCS[&quot;WGS 84&quot;, 
+  DATUM[&quot;World Geodetic System 1984&quot;, 
+    SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]], 
+  PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+  UNIT[&quot;degree&quot;, 0.017453292519943295], 
+  AXIS[&quot;Geodetic longitude&quot;, EAST], 
+  AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</nativeCRS>
+  <srs>EPSG:3857</srs>
+  <nativeBoundingBox>
+    <minx>2298286.087855659</minx>
+    <maxx>2304778.5411213483</maxx>
+    <miny>5531697.488679636</miny>
+    <maxy>5539150.24346582</maxy>
+    <crs class="projected">EPSG:3857</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>20.645855199999996</minx>
+    <maxx>20.7041779</maxx>
+    <miny>44.42659279999999</miny>
+    <maxy>44.47438489999998</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>REPROJECT_TO_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--2aa5eaea:18e417e3ff7:-7fe2</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <internationalTitle/>
+  <internationalAbstract/>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  postgis:
+    image: postgis/postgis:latest
+    container_name: postgis
+    environment:
+      POSTGRES_DB: postgis
+      POSTGRES_USER: postgis
+      POSTGRES_PASSWORD: postgis
+    ports:
+      - "5432:5432"
+
+  geoserver:
+    image: oscarfonts/geoserver
+    container_name: geoserver
+    depends_on:
+      - postgis
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./geoserver_data:/var/local/geoserver
+    environment:
+      GEOSERVER_DATA_DIR: /var/local/geoserver
